@@ -1,20 +1,15 @@
-# Ignore results and outputs
 results/
 results/checkpoints/
 results/logs/
 results/predictions/
 
-# Ignore processed and raw data
 processed/
 NorQuAD data/
 
-# Python
 __pycache__/
 *.py[cod]
 .venv/
 
-# macOS
 .DS_Store
 
-# Misc
 *.log
