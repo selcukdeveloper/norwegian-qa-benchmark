@@ -50,4 +50,3 @@ Notes and tips
   `BERTSCORE=0` to skip it.
 - The yes/no scorer is strict about abstentions; see `src/eval/score.py` for
   the exact behavior.
-# norwegian-qa-benchmark
