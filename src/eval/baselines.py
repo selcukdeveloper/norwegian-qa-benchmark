@@ -37,7 +37,7 @@ def majority_label(train_rows) -> str:
 def baseline_majority(tier: str = "yes_no") -> Path:
     train, _, test = load_tier(tier)
     label = majority_label(train)
-    print(f"[baseline/majority] train majority = {label}")
+    print(f"\n[baseline/majority] train majority = {label}")
     preds = [
         {"id": r["id"], "tier": tier, "question": r["question"],
          "gold": r["answer_text"], "pred": label}
