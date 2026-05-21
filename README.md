@@ -6,6 +6,8 @@ models on three answer types (yes/no, short factual spans, and longer spans)
 and make it easy to reproduce training, scoring, and figures.
 
 Quick Guide
+
+- Obtain NorQuAD data from https://github.com/ltgoslo/NorQuAD/tree/main/data
 - Prepare processed data (one-time): run the scripts in `src/data/`.
 - Train models on the workspace (remote): `h100/run.sh` handles training
   and generation.
@@ -15,6 +17,7 @@ Quick Guide
   `python3 -m src.viz.results_figures`.
 
 Main folders
+
 - NorQuAD data/: original raw NorQuAD JSON
 - processed/: tiered jsonl files used by training/eval (regenerate via `src/data`)
 - src/: processing, models, training loops, evaluation, and plotting code
@@ -29,7 +32,7 @@ python3 -m src.data.process_norquad
 python3 -m src.data.process_noboolq
 
 # On your workspace (run once)
-source h100/setup.sh 
+source h100/setup.sh
 
 # On your workspace (run every session)
 conda activate norqa
@@ -45,6 +48,7 @@ python3 -m src.viz.results_figures
 ```
 
 Notes and tips
+
 - `score.sh` is safe to re-run when new prediction files arrive.
 - BERTScore can be longer on first run (downloads XLM-R weights). Set
   `BERTSCORE=0` to skip it.
